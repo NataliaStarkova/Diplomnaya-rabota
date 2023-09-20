@@ -1,0 +1,29 @@
+SELECT login, COUNT(DISTINCT track) FROM "Couriers" JOIN "Orders" ON "Couriers".id = "Orders"."courierId" WHERE "inDelivery" = true GROUP BY login;
+
+
+
+SELECT track, CASE WHEN finished = true THEN 2 WHEN "Orders".cancelled = true THEN -1 WHEN "inDelivery"= true THEN 1 ELSE 0 END AS "Status_zakaza "FROM "Orders";
+
+
+
+
+Подключение к удаленному серверу.
+
+
+Открыть консоль. Вести команду 
+$ ssh-keygen  - получение ключейssh
+
+$ cat ~/.ssh/id_rsa.pub  публичный ключ
+
+$ ssh имя пользователя@хост -p порт
+
+psql -U morty -d scooter_rent поключение к БД
+
+Команды в БД
+
+\l - список БД
+q - выйти из таблицы
+\dt список таблиц в БД
+
+
+
