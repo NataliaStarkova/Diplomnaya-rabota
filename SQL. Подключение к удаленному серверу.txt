@@ -10,8 +10,8 @@ SELECT track, CASE WHEN finished = true THEN 2 WHEN "Orders".cancelled = true TH
 Подключение к удаленному серверу.
 
 
-Открыть консоль. Вести команду 
-$ ssh-keygen  - получение ключейssh
+Открыть консоль. Ввести команду 
+$ ssh-keygen  - получение ключей ssh
 
 $ cat ~/.ssh/id_rsa.pub  публичный ключ
 
